@@ -1,0 +1,161 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+  background-image: url("../img/logo/banner_pedidos.png");
+  background-size: cover;       /* faz a imagem preencher todo o espaço */
+  background-position: center;  /* centraliza a imagem */
+  background-repeat: no-repeat; /* evita repetição */
+  width: 100vw;                 /* ocupa toda a largura da janela */
+  height: 380px;                /* altura ajustável — pode aumentar se quiser */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(14, 1, 1);
+  text-align: center;
+}
+
+/* área do carrinho de compras */
+.cart-count {
+  background: #ebc5aa;
+  color: rgb(10, 1, 1);
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+    /* Menu logo abaixo do título */
+#menu {
+  background-color: #8b4513;
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da lista do menu */
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 25px;
+}
+
+/* Links do menu */
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease;
+}
+/* imputs de */
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.item-row input[type="number"] {
+  width: 90%;
+}
+
+
+/* Hover */
+#menu a:hover {
+  color: #ffd27f;
+}
+
+    form {
+      max-width: 700px;
+      background-color: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      border: 2px solid #f4c07a;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #b3541e;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.7rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    #email, #nome{
+      width: 40%;
+    }
+
+    #tel{
+      width: 30%;
+    }
+    #sabor{
+      width: 20%;
+    }
+    #dataEntrega{
+      width: 20%;
+    }
+    #observacoes{
+      width: 95%;
+    }
+    #orcamento{
+      width: 20%;
+    }
+    
+    .opcoes {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      background-color: #d2691e;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #b3541e;
+    }
+
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      color: #555;
+    }

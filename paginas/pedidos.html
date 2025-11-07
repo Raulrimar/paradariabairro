@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário de Pedidos Especiais - Padaria Delícia do Pão</title>
+  <link rel="stylesheet" href="/css/style_pedidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <!--<h1>Formulário de Pedidos Especiais</h1>
+      <p><strong>Encomendas personalizadas — diga como quer que fique!</strong></p>-->
+    </header>
+
+   <nav id="menu" aria-label="Menu principal">
+  <ul>
+    <li><a href="../index.html"><i class="fa fa-home"></i> Início</a></li>
+    <li><a href="/paginas/receitas.html">🍰 Receitas</a></li>
+    <li><a href="/paginas/pedidos.html">💵 Pedidos</a></li>
+    <li><a href="#">📸 Galeria</a></li>
+    <li><a href="/paginas/faleConosco.html">💬 Fale Conosco</a></li>
+
+    <!-- ✅ CARRINHO -->
+    <li id="cart-area">
+      <a href="#">
+        🛒 Carrinho <span id="cart-count" class="cart-count">0</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    <form class="card" id="pedidoForm" action="obrigado.html" method="post" novalidate>
+      <fieldset>
+        <legend>Seção 1 - Dados do Cliente</legend>
+
+        <div class="grid cols-2">
+          <div>
+            <label for="nome">👤 Nome completo <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required aria-required="true" />
+          </div>
+
+          <div>
+            <label for="telefone">📞 Telefone <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <input id="tel"
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(XX) XXXXX-XXXX"
+              pattern="^\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}$"
+              title="Formato: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX"
+              required
+              aria-required="true"
+            />
+            <div class="help">Ex.: (68) 99999-1234 — parênteses e hífen recomendados.</div>
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="email">📧 Email <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <input type="email" id="email" name="email" placeholder="seunome@email.com" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Seção 2: Detalhes do Pedido -->
+      <fieldset>
+        <legend>Seção 2 - Detalhes do Pedido</legend>
+
+       <div class="grid">
+  <div>
+    <label id="tipo-label">🍰 Tipo de produto <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+
+    <div class="radio-group" role="radiogroup" aria-required="true" aria-labelledby="tipo-label">
+
+      <div class="item-row">
+        <label>
+          <input type="radio" name="bolo" value="Bolo" required> Bolo
+        </label>
+        <input type="number" name="qtdBolo" placeholder="Qtd" min="0">
+        <div>
+              <select id="sabor" name="sabor" required>
+              <option value="">Sabor</option>
+              <option>Chocolate</option>
+              <option>Morango</option>
+              <option>Baunilha</option>
+              <option>Doce de Leite</option>
+              <option>Limão</option>
+              <option>Red Velvet</option>
+              <option>Prestígio</option>
+              <option>Outra (descrever em observações)</option>
+            </select>
+          </div>
+      </div>
+
+      <div class="item-row">
+        <label>
+          <input type="radio" name="torta" value="Torta"> Torta
+        </label>
+        <input type="number" name="qtdTorta" placeholder="Qtd" min="0">
+        <div>
+              <select id="sabor" name="sabor" required>
+              <option value="">Sabor</option>
+              <option>Chocolate</option>
+              <option>Morango</option>
+              <option>Baunilha</option>
+              <option>Doce de Leite</option>
+              <option>Limão</option>
+              <option>Prestígio</option>
+            </select>
+          </div>
+      </div>
+      
+
+      <div class="item-row">
+        <label>
+          <input type="radio" name="salgado" value="Salgados"> Salgados
+        </label>
+        <input type="number" name="qtdSalgados" placeholder="Qtd" min="0">
+        <div>
+              <select id="sabor" name="sabor" required>
+              <option value="">Sabor</option>
+              <option>Coxinha de frango con catupiry</option>
+              <option>Pastel e carne</option>
+              <option>Pastel de frango</option>
+              <option>Salgado Assado</option>
+            </select>
+          </div>
+      </div>      
+    </div>    
+  </div>
+          <div>
+            <label for="sabor">🍫 Sabor / Recheio <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <select id="sabor" name="sabor" required>
+              <option value="">Sabor</option>
+              <option>Chocolate</option>
+              <option>Morango</option>
+              <option>Baunilha</option>
+              <option>Doce de Leite</option>
+              <option>Limão</option>
+              <option>Red Velvet</option>
+              <option>Prestígio</option>
+              <option>Outra (descrever em observações)</option>
+            </select>
+          </div>
+
+          <div>
+            <label>📏 Tamanho <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <div class="radio-group" role="radiogroup" aria-required="true">
+              <label><input type="radio" name="" value="Pequeno" required> Pequeno</label>
+              <label><input type="radio" name="tamanho" value="Médio"> Médio</label>
+              <label><input type="radio" name="tamanho" value="Grande"> Grande</label>
+            </div>
+          </div>
+
+          <div>
+            <label for="dataEntrega">📅 Data de entrega <span aria-hidden="true" style="color:#b91c1c">*</span></label>
+            <input id="dataEntrega" type="date" id="dataEntrega" name="dataEntrega" required aria-required="true" />
+            <div class="help">Escolha a data desejada. Não aceitamos datas anteriores ao dia atual.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Seção 3: Informações Adicionais -->
+      <fieldset>
+        <legend>Seção 3 - Informações Adicionais</legend>
+
+        <label for="observacoes">📝 Observações especiais</label>
+        <textarea id="observacoes" name="observacoes" rows="4" maxlength="800" placeholder="Alergias, decoração, textos para bolos (ex: 'Feliz Aniversário Ana'), horário de retirada, etc."></textarea>
+
+        <div style="margin-top:10px;">
+          <label for="orcamento">💵 Orçamento máximo (R$)</label>
+          <input id="orcamento" type="number" id="orcamento" name="orcamento" placeholder="Ex.: 150" min="0" step="0.01" />
+          <div class="help">Se tiver um teto de gasto, informe aqui para que possamos sugerir opções.</div>
+        </div>
+
+        <div id="formErrors" class="error" role="alert" aria-live="polite" style="display:none;"></div>
+      </fieldset>
+
+      <!-- Consentimentos/Preferências -->
+<fieldset>
+  <legend>Contato e Preferências</legend>
+
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Confirmo que as informações acima estão corretas e a
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+  <label class="form-check-label" for="defaultCheck2">
+    Desejo receber promoções e novidades por e-mail/WhatsApp
+  </label>
+</div>
+</fieldset>
+
+      <div class="actions">
+        <button type="reset">Limpar Formulário</button>
+        <button type="submit">Enviar Pedido</button>
+      </div>
+    </form>
+
+    <footer>
+      <p>&copy; 2025 Padaria Delícia do Pão | Feito com ❤️ para nossos clientes</p>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const form = document.getElementById('pedidoForm');
+      const dataEntrega = document.getElementById('dataEntrega');
+      const telefone = document.getElementById('telefone');
+      const orcamento = document.getElementById('orcamento');
+      const formErrors = document.getElementById('formErrors');
+
+      // Setar min date para hoje (formato YYYY-MM-DD)
+      const hoje = new Date();
+      const yyyy = hoje.getFullYear();
+      const mm = String(hoje.getMonth() + 1).padStart(2, '0');
+      const dd = String(hoje.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+      dataEntrega.setAttribute('min', todayStr);
+
+      // função utilitária para mostrar erros
+      function showError(msg){
+        formErrors.style.display = 'block';
+        formErrors.textContent = msg;
+      }
+      function clearError(){
+        formErrors.style.display = 'none';
+        formErrors.textContent = '';
+      }
+
+      // validação extra no submit
+      form.addEventListener('submit', function(e){
+        clearError();
+
+        // browser built-in validation first
+        if (!form.checkValidity()){
+          // let browser show built-in messages
+          // but still prevent submit to display custom summary
+          e.preventDefault();
+          e.stopPropagation();
+          showError('Por favor, preencha todos os campos obrigatórios corretamente.');
+          form.reportValidity();
+          return;
+        }
+
+        // validar data de entrega (não anterior a hoje)
+        const dataVal = dataEntrega.value;
+        if (dataVal){
+          if (dataVal < dataEntrega.getAttribute('min')){
+            e.preventDefault();
+            e.stopPropagation();
+            showError('A data de entrega não pode ser anterior a hoje.');
+            dataEntrega.focus();
+            return;
+          }
+        }
+
+        // validar telefone por pattern (aprimoramento)
+        const telPattern = /^\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}$/;
+        if (!telPattern.test(telefone.value)){
+          e.preventDefault();
+          e.stopPropagation();
+          showError('Telefone inválido. Use o formato (XX) XXXXX-XXXX ou (XX) XXXX-XXXX.');
+          telefone.focus();
+          return;
+        }
+
+        // validar orçamento (se preenchido, deve ser >= 0)
+        if (orcamento.value && Number(orcamento.value) < 0){
+          e.preventDefault();
+          e.stopPropagation();
+          showError('Orçamento deve ser um número igual ou maior que 0.');
+          orcamento.focus();
+          return;
+        }
+
+        // tudo ok -> permitir envio (navegar para obrigado.html)
+        // opcional: aqui poderia preparar dados para envio via AJAX.
+      });
+
+      // ao resetar, limpar mensagens de erro
+      form.addEventListener('reset', function(){
+        setTimeout(clearError, 10);
+      });
+
+      // dica: valide telefone enquanto digita (melhora UX)
+      telefone.addEventListener('input', function(){
+        const val = telefone.value;
+        const pattern = /^\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}$/;
+        if (val.length > 0 && !pattern.test(val)){
+          telefone.setCustomValidity('Formato esperado: (XX) XXXXX-XXXX');
+        } else {
+          telefone.setCustomValidity('');
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Satisfação - Padaria Delícia do Pão</title>
+  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Consul de Satisfação - Padaria do Bairro</h1>
+    <p><strong>Queremos ouvir você! Sua opinião nos ajuda a melhorar.</strong> </p>
+  </header>
+    <nav id="menu">
+  <ul>
+    <li><a href="../index.html"><i class="fa fa-home"></i> Início</a></li>
+    <li><a href="/paginas/receitas.html">Receitas</a></li>
+    <li><a href="/paginas/pedidos.html">Pedidos</a></li>
+    <li><a href="#">Galeria</a></li>
+    <li><a href="/paginas/faleConosco.html">Fale Conosco</a></li>
+  </ul>
+</nav>
+
+  <form action="obrigado.html" method="post">
+    
+    <fieldset>
+      <legend>👤 Contato Geral</legend>
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required aria-required="true">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="seunome@email.com" required>
+
+     <label for="telefone">Telefone:</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+        placeholder="(XX) XXXXX-XXXX"
+>
+    </fieldset>
+
+    <fieldset>
+      <legend>🍰 Preferências e Experiência</legend>
+
+      <label for="frequencia">Com que frequência você visita nossa padaria?</label>
+      <select id="frequencia" name="frequencia" required>
+        <option value="">Selecione</option>
+        <option>Todos os dias</option>
+        <option>Algumas vezes por semana</option>
+        <option>Raramente</option>
+        <option>Primeira vez</option>
+      </select>
+
+      <label>Quais produtos você mais consome?</label>
+      <div class="opcoes">
+        <label><input type="checkbox" name="produtos" value="pão francês"> Pão francês</label>
+        <label><input type="checkbox" name="produtos" value="bolos"> Bolos</label>
+        <label><input type="checkbox" name="produtos" value="doces"> Doces</label>
+        <label><input type="checkbox" name="produtos" value="salgados"> Salgados</label>
+        <label><input type="checkbox" name="produtos" value="cafés"> Cafés</label>
+      </div>
+
+      <label>Como você avalia o atendimento?</label>
+      <div class="opcoes">
+        <label><input type="radio" name="atendimento" value="excelente" required> Excelente</label>
+        <label><input type="radio" name="atendimento" value="bom"> Bom</label>
+        <label><input type="radio" name="atendimento" value="regular"> Regular</label>
+        <label><input type="radio" name="atendimento" value="ruim"> Ruim</label>
+      </div>
+
+      <label for="comentario">Deixe seu comentário ou sugestão:</label>
+      <textarea id="comentario" name="comentario" rows="4" placeholder="Conte-nos o que você acha..." maxlength="300"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>📞 Contato e Consentimento</legend>
+
+      <label><input type="checkbox" name="novidades" value="sim"> Desejo receber promoções e novidades por e-mail.</label>
+      <label><input type="checkbox" name="autorizacao" required> Autorizo o uso dos meus dados para fins de pesquisa de satisfação.</label>
+    </fieldset>
+
+    <button type="submit">Enviar Respostas</button>
+    <button type="reset">Limpar Formulário</button>
+
+  </form>
+
+  <footer>
+    <p>&copy; 2025 Padaria Delícia do Pão | Feito com ❤️ para nossos clientes</p>
+  </footer>
+
+</body>
+</html>
