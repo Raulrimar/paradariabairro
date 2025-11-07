@@ -41,7 +41,7 @@ h1, h2, h3 {
 
 /* ===================== HERO ===================== */
 .hero {
-  background-image: url("../img/logo/banner_receitas.png");
+  background-image: url("./img/logo/banner_receitas.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
