@@ -1,5 +1,5 @@
 body {
-background-image: url("./img/fundo_login.png");
+background-image: url("../img/fundo_login.png");
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
@@ -38,4 +38,5 @@ a {
 color: #6b4b1c;
 
 }
+
 
